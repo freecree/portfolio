@@ -2,9 +2,7 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
-      primary: 'Orbitron',
-      secondary: 'Rajdhani',
-      tertiary: 'Aldrich',
+      primary: 'Rajdhani'
     },
     container: {
       padding: {
@@ -12,20 +10,27 @@ module.exports = {
       },
     },
     screens: {
+      xxsm: '350px',
+      xsm: '470px',
       sm: '640px',
       md: '768px',
       lg: '960px',
       xl: '1200px',
     },
+    colors: {
+      dark: '#1C0425',
+      white: 'var(--color-white)',
+      grad: 'var(--color-grad)',
+      bg_light1: '#88DFFA',
+      bg_light2: '#E36DF6',
+      blue: '#3B78ED',
+      pink: '#FC33E8',
+      accent: '#AC0DF7',
+      // grad_reversed: 'var(--color-grad-reversed)',
+    },
     extend: {
-      colors: {
-        primary: '#0a0a0a',
-        accent: '#B809C3',
-      },
       backgroundImage: {
-        site: "url('./assets/site-bg.jpg')",
-        about: "url('./assets/about.png')",
-        services: "url('./assets/services.png')",
+        angle_b: "url('./assets/icon_angle_b.svg')",
       },
     },
   },
