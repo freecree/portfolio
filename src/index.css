@@ -77,7 +77,7 @@
   }
   
   .btn-outline::after {
-    content: attr(data);
+    content: attr(data-text);
     background: var(--color-grad);
     background-clip: text;
     -webkit-background-clip: text;
@@ -88,5 +88,10 @@
     background: var(--color-grad-reversed);
     background-clip: text;
     -webkit-background-clip: text;
+  }
+  .icon-hover:hover {
+    fill:url(#mygradient);
+    /* fill: red; */
+    @apply transition-all duration-1000;
   }
 }

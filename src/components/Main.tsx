@@ -3,8 +3,12 @@ import avatar from '../assets/avatar_main.png';
 import iconGithub from '../assets/icon_github.svg';
 import iconLinkedin from '../assets/icon_linkedin.svg';
 import iconTelegram from '../assets/icon_telegram.svg';
+import Icons from '../assets/icons.svg';
+import Icon from './ui/Icon';
 
 function Main() {
+  console.log('icons: ', Icons);
+  
   return ( 
     <section className='relative mx-auto pt-[105px] pb-[105px]'>
       <div className='absolute w-[60%] h-[40vh] left-0 top-0 z-[-1] rounded-[50%] blur-[250px] bg-bg_light1'></div>
@@ -17,18 +21,25 @@ function Main() {
             Full stack JavaScript developer with specialization in React and NodeJS. Experienced above 1 year of creating various sites, including landings and other web pages.
           </p>
           <div className="flex flex-col xxsm:flex-row items-center gap-[16px] mt-[35px]">
-            <Link to="contact-me" className="btn btn-fill">Contact me</Link>
-            <Link to="works" className="btn btn-outline" data='My works'></Link>
+            <Link className="btn btn-fill"
+              smooth={true}
+              to="contacts">
+                Contact me
+              </Link>
+            <Link className="btn btn-outline" data-text="My works"
+              smooth={true}
+              to="works">
+            </Link>
           </div>
           <div className="flex justify-center xxsm:justify-start gap-[24px] mt-[25px]">
-            <a target='_blank' href="https://github.com/freecree/freecree.github.io">
-              <img src={iconGithub} alt="Github"/>
+            <a target='_blank' href="https://github.com/freecree">
+              <Icon name='github' width={25} height={25} className='icon-hover cust-transition' />
             </a>
             <a target='_blank' href="https://www.linkedin.com/in/bohdan-sidorov">
-            <img src={iconLinkedin} alt="Linkedin"/>
+              <Icon name='linkedin' width={25} height={25} className='icon-hover' />
             </a>
             <a target='_blank' href="https://telegram.me/ferragus_S">
-              <img src={iconTelegram} alt="Telegram"/>
+              <Icon name='telegram' width={25} height={25} className='icon-hover' />
             </a>
           </div>
         </div>

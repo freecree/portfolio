@@ -2,6 +2,7 @@ import iconTelegram from '../assets/icon_telegram.svg';
 import iconEmail from '../assets/icon_email.svg';
 import iconLinkedin from '../assets/icon_linkedin.svg';
 import iconGithub from '../assets/icon_github.svg';
+import Icon from './ui/Icon';
 
 function Contacts() {
   return ( 
@@ -11,27 +12,27 @@ function Contacts() {
         <div className="mt-[55px]">
           <div className="flex items-center gap-[20px] mt-[10px]">
             <a target='_blank' href="https://telegram.me/ferragus_S">
-              <img src={iconTelegram} width={25} alt="Telegram"/>
+              <Icon name='telegram' width={25} height={25} className='icon-hover' />
             </a>
             <p className='text-[18px] sm:text-[25px]'>@ferragus_S</p>
           </div>
           <div className="flex items-center gap-[20px] mt-[10px]">
             <a target='_blank' href="mailto:bohdansidorov@gmail.com">
-              <img src={iconEmail} width={25} alt="Email"/>
+              <Icon name='email' width={25} height={25} className='icon-hover' />
             </a>
             <p className='text-[18px] sm:text-[25px]'>bohdansidorov@gmail.com</p>
           </div>
           <div className="flex items-center gap-[20px] mt-[10px]">
             <a target='_blank' href="https://www.linkedin.com/in/bohdan-sidorov">
-              <img src={iconLinkedin} width={25} alt="LinkedIn"/>
+              <Icon name='linkedin' width={25} height={25} className='icon-hover' />
             </a>
             <p className='text-[18px] sm:text-[25px]'>www.linkedin.com/in/bohdan-sidorov</p>
           </div>
           <div className="flex items-center gap-[20px] mt-[10px]">
-            <a target='_blank' href="https://github.com/freecree/freecree.github.io">
-              <img src={iconGithub} width={25} alt="Github"/>
+            <a target='_blank' href="https://github.com/freecree">
+              <Icon name='github' width={25} height={25} className='icon-hover' />
             </a>
-            <p className='text-[18px] sm:text-[25px]'>https://freecree.github.io/</p>
+            <p className='text-[18px] sm:text-[25px]'>https://github.com/freecree</p>
           </div>
         </div>
       </div>
