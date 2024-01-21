@@ -1,24 +1,26 @@
-import React from 'react';
+import {PropsWithChildren} from 'react';
 import {Link} from 'react-scroll';
+import { useTranslation } from 'react-i18next';
 
-const Nav = () => {
+const Nav = ({className}: {className: string}) => {
+  const { t } = useTranslation();
   return (
-    <nav className='flex justify-center space-x-9 xsm:space-x-[50px] font-bold text-[20px]'>
+    <nav className={`flex justify-center space-x-9 xsm:space-x-[50px] font-bold ${className}`}>
       <Link className='cursor-pointer hover:text-accent cust-transition'
         to='about'
         smooth={true}
       >
-        About
+        {t('navbar.about')}
       </Link>
       <Link className='cursor-pointer hover:text-accent cust-transition'
         smooth={true}
         to='works'>
-          My works
+          {t('navbar.myworks')}
       </Link>
       <Link className='cursor-pointer hover:text-accent cust-transition'
         smooth={true}
         to='contacts'>
-          Contacts
+          {t('navbar.contacts')}
       </Link>
     </nav>
   )

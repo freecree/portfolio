@@ -1,14 +1,12 @@
-import iconTelegram from '../assets/icon_telegram.svg';
-import iconEmail from '../assets/icon_email.svg';
-import iconLinkedin from '../assets/icon_linkedin.svg';
-import iconGithub from '../assets/icon_github.svg';
 import Icon from './ui/Icon';
+import { useTranslation } from 'react-i18next';
 
 function Contacts() {
-  return ( 
+  const [t] = useTranslation();
+  return (
     <section id='contacts' className="relative h-[100vh] flex justify-center items-center">
       <div className="container mx-auto flex flex-col items-center">
-        <h1 className="h1 md:text-[50px] text-center">Let’s work together!</h1>
+        <h1 className="h1 md:text-[50px] text-center">{t('contacts.title')}</h1>
         <div className="mt-[55px]">
           <div className="flex items-center gap-[20px] mt-[10px]">
             <a target='_blank' href="https://telegram.me/ferragus_S">

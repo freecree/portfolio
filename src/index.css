@@ -20,13 +20,13 @@
     @apply font-primary text-dark;
   }
   .h1 {
-    @apply text-[40px] leading-10 font-bold tracking-[10%] uppercase;
+    @apply text-[40px] leading-10 font-bold font-title tracking-[10%] uppercase;
   }
   .h2 {
-    @apply text-[40px] leading-10 font-bold tracking-[10%];
+    @apply text-[40px] leading-10 font-bold font-title tracking-[10%];
   }
   .h3 {
-    @apply text-[25px] leading-[130%] font-bold tracking-[10%];
+    @apply text-[25px] leading-[130%] font-bold font-title tracking-[10%];
   }
   .cust-transition {
     @apply transition-all duration-300;
@@ -35,13 +35,12 @@
 
 @layer components {
   .btn {
-    @apply text-[20px] font-bold w-[147px] h-[51px] flex justify-center items-center rounded-[20px] cursor-pointer;
+    /* @apply text-[20px] font-bold w-[147px] h-[51px] flex justify-center items-center rounded-[20px] cursor-pointer; */
+    @apply text-[20px] font-bold px-[30px] h-[51px] flex justify-center items-center rounded-[20px] cursor-pointer;
   }
   .btn:hover {
     transition: all 1s linear;
   }
-  
-  
   .btn-fill {
     @apply text-white;
     background: var(--color-grad);

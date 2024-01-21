@@ -6,7 +6,10 @@ export default {
   ],
   theme: {
     fontFamily: {
-      primary: 'Rajdhani'
+      // primary: 'Rajdhani, Montserrat, sans-serif'
+      // primary: 'IBM Plex Mono'
+      primary: 'Raleway',
+      title: 'IBM Plex Mono'
     },
     container: {
       padding: {
