@@ -1,8 +1,15 @@
-module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+// @type {import('tailwindcss').Config}
+console.log('tailwind css');
+export default {
+  content: [
+    './src/**/*.{html,js,jsx,ts,tsx}'
+  ],
   theme: {
     fontFamily: {
-      primary: 'Rajdhani'
+      // primary: 'Rajdhani, Montserrat, sans-serif'
+      // primary: 'IBM Plex Mono'
+      primary: 'Raleway',
+      title: 'IBM Plex Mono'
     },
     container: {
       padding: {

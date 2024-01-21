@@ -1,11 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useWindowDimensions from '../hooks/useWindowDimensions';
+import { useTranslation } from 'react-i18next';
 
-import workPrewiev1 from '../assets/work1.png';
-import workPrewiev2 from '../assets/work2.png';
-import workPrewiev3 from '../assets/work3.png';
-import workPrewiev4 from '../assets/work4.png';
 import tailwindConfig from '../../tailwind.config';
+import works from '../data/works';
 
 function Works() {
   const [windowDimensions, setWindowDimensions] = useWindowDimensions();
@@ -13,14 +11,7 @@ function Works() {
   const reseizeEdge = +(tailwindConfig.theme.screens.sm.slice(0, -2));
   const worksIncrement = (windowDimensions.width > reseizeEdge) ? 4 : 2;
   const [visibleWorksNumber, setVisibleWorksNumber] = useState<number>(worksIncrement);
-
-  const works = [
-    {src: workPrewiev1, title: 'Site for dog kennel "Iz Vladeniya Akello"', link: 'https://freecree.github.io/pedigree/'},
-    {src: workPrewiev2, title: 'Landing page for Landing Studio', link: 'https://freecree.github.io/land-site/'},
-    {src: workPrewiev3, title: 'Layout of small CRM', link: 'https://freecree.github.io/crm/'},
-    {src: workPrewiev4, title: 'Web system "Hand marking"', link: 'http://51.20.77.94/'},
-  ]
-
+  const [t, i18n] = useTranslation();
 
   function onShowMore() {
     setVisibleWorksNumber(v => v + worksIncrement);
@@ -30,9 +21,11 @@ function Works() {
     setVisibleWorksNumber(worksIncrement);
   }
 
+  const lng_prefix = i18n.language === 'en' ? '' : '_' + i18n.language;
+
   return (
     <section id='works' className="pt-[100px] pb-[40px] container mx-auto max-w-[1500px] text-center">
-      <h2 className="h2 text-center">My works</h2>
+      <h2 className="h2 text-center">{t('my-works.title')}</h2>
       <div className="mt-[80px] grid sm:grid-cols-2 gap-4">
         {works.slice(0, visibleWorksNumber).map((work, i) =>
           (
@@ -42,9 +35,9 @@ function Works() {
                 text-white bg-[rgba(0,0,0,0.8)] cust-transition opacity-0 invisible
                 group-hover:visible group-hover:opacity-100'>
                 <div className="text-center">
-                  <h3 className='h3 text-[16px] md:text-[18px] mb-[20px]'>{work.title}</h3>
+                  <h3 className='h3 text-[16px] md:text-[18px] mb-[20px]'>{work[`title${lng_prefix}`]}</h3>
                   <a href={work.link} target='_blank'>
-                    <button className='btn btn-fill m-auto h-auto w-auto text-[15px] md:text-[18px] px-[25px] py-[12px]'>View project</button>
+                    <button className='btn btn-fill m-auto h-auto w-auto text-[15px] md:text-[18px] px-[25px] py-[12px]'>{t('my-works.view-btn')}</button>
                   </a>
                 </div>
               </div>
@@ -57,7 +50,7 @@ function Works() {
         <div
           onClick={onShowMore}
           className='m-auto mt-[25px] inline-flex gap-2 items-center justify-center cursor-pointer'>
-          <div className="text-[20px] text-accent font-bold">Show more</div>
+          <div className="text-[20px] text-accent font-bold">{t('my-works.show-more')}</div>
           <div className='bg-angle_b w-[16px] h-[9px] bg-contain bg-no-repeat'></div>
         </div>
         )
@@ -67,7 +60,7 @@ function Works() {
         <div
           onClick={onHide}
           className='m-auto mt-[25px] inline-flex gap-2 items-center justify-center cursor-pointer'>
-          <div className="text-[20px] text-accent font-bold">Hide</div>
+          <div className="text-[20px] text-accent font-bold">{t('my-works.hide')}</div>
           <div className='bg-angle_b w-[16px] h-[9px] bg-contain bg-no-repeat rotate-180'></div>
         </div>
         )
