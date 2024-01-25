@@ -44,22 +44,25 @@ function About() {
             </h4>
           </div>
           <ul className={`mt-[18px] list-disc pl-[15px] ${(activeSkillTab === 'frontend') ? '' : 'hidden'}`}>
-            {(t('about-me.frontend-list', {returnObjects: true, defaultValue: []}) as string[]).map(item => 
-              <li>{item}</li>
+            {(t('about-me.frontend-list',
+            {returnObjects: true, defaultValue: []}) as string[]).map((item, i) => 
+              <li key={i}>{item}</li>
             )}
           </ul>
           <ul className={`mt-[18px] ${(activeSkillTab === 'backend') ? '' : 'hidden'}`}>
             <li>{t('about-me.backend-main')}
               <ul className='list-disc pl-[15px]'>
-                {(t('about-me.backend-main-list', {returnObjects: true, defaultValue: []}) as string[]).map(item => 
-                  <li>{item}</li>
+                {(t('about-me.backend-main-list',
+                {returnObjects: true, defaultValue: []}) as string[]).map((item, i) => 
+                  <li key={i}>{item}</li>
                 )}
               </ul>
             </li>
             <li>{t('about-me.backend-other')}
               <ul className='list-disc pl-[15px]'>
-                {(t('about-me.backend-other-list', {returnObjects: true, defaultValue: []}) as string[]).map(item => 
-                  <li>{item}</li>
+                {(t('about-me.backend-other-list',
+                {returnObjects: true, defaultValue: []}) as string[]).map((item, i) => 
+                  <li key={i}>{item}</li>
                 )}
               </ul>
             </li>

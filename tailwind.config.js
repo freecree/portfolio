@@ -1,13 +1,9 @@
-// @type {import('tailwindcss').Config}
-console.log('tailwind css');
 export default {
   content: [
     './src/**/*.{html,js,jsx,ts,tsx}'
   ],
   theme: {
     fontFamily: {
-      // primary: 'Rajdhani, Montserrat, sans-serif'
-      // primary: 'IBM Plex Mono'
       primary: 'Raleway',
       title: 'IBM Plex Mono'
     },
@@ -33,7 +29,6 @@ export default {
       blue: '#3B78ED',
       pink: '#FC33E8',
       accent: '#AC0DF7',
-      // grad_reversed: 'var(--color-grad-reversed)',
     },
     extend: {
       backgroundImage: {

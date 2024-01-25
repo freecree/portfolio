@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es5",
     "allowJs": true,
+
     "outDir": "./build",
     // "lib": ["dom", "dom.iterable", "esnext"],
     "skipLibCheck": true,
@@ -9,7 +10,8 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    // "module": "commonjs",
+    "module": "es2022",
     "moduleResolution": "node",
     "jsx": "react-jsx",
     "isolatedModules": true
@@ -18,25 +20,3 @@
   "include": ["additional.d.ts", "./src/**/*"],
   "exclude": ["node_modules"]
 }
-
-// {
-//   "compilerOptions": {
-//     "target": "ESNext",
-//     "lib": ["dom", "dom.iterable", "esnext"],
-//     "types": ["vite/client", "vite-plugin-svgr/client"],
-//     "allowJs": false,
-//     "skipLibCheck": false,
-//     "esModuleInterop": false,
-//     "allowSyntheticDefaultImports": true,
-//     "strict": true,
-//     "forceConsistentCasingInFileNames": true,
-//     "noFallthroughCasesInSwitch": true,
-//     "module": "ESNext",
-//     "moduleResolution": "node",
-//     "resolveJsonModule": true,
-//     "isolatedModules": true,
-//     "noEmit": true,
-//     "jsx": "react-jsx"
-//   },
-//   "include": ["src"]
-// }

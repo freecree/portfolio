@@ -9,10 +9,15 @@ i18n
   .use(Backend)
   .use(LanguageDetector)
   .init({
+    backend: {
+      loadPath: './locales/{{lng}}/translation.json'
+    },
+    supportedLngs: ['en', 'ukr'],
     fallbackLng: "ukr",
     detection: {
       order: ["path", "localStorage", "htmlTag", "cookie"],
       caches: ["localStorage", "cookie"], // cache user language on
+      lookupFromPathIndex: -1,
     },
     interpolation: {
       escapeValue: false // react already safes from xss

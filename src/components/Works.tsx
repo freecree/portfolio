@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import tailwindConfig from '../../tailwind.config';
 import works from '../data/works';
+import getImageUrl from '../utils/image-util';
 
 function Works() {
   const [windowDimensions, setWindowDimensions] = useWindowDimensions();
@@ -30,7 +31,7 @@ function Works() {
         {works.slice(0, visibleWorksNumber).map((work, i) =>
           (
             <div key={i} className="group relative cursor-pointer">
-              <img src={work.src} alt={work.title} className='object-cover h-[100%] relative z-0'/>
+              <img src={getImageUrl(work.image)} alt={work.title} className='object-cover h-[100%] relative z-0'/>
               <div className='p-[10px] absolute w-full h-full flex items-center justify-center top-0
                 text-white bg-[rgba(0,0,0,0.8)] cust-transition opacity-0 invisible
                 group-hover:visible group-hover:opacity-100'>
