@@ -20,7 +20,7 @@
     "english": "English",
     "backend": "Backend",
     "frontend-list": ["HTML, CSS / SCSS", "JavaScript(ES6) / Typescript", "React, React Router",
-     "React, React Router", "Axios", "Mobx", "i18next", "Builders: Webpack, Gulp, Vite, Esbuild"
+     "Readux Toolkit, RTK Query", "Ant Design, Material UI", "Axios", "Mobx", "i18next", "Builders: Webpack, Gulp, Vite, Esbuild"
     ],
     "backend-main": "Main stack:",
     "backend-main-list": ["NodeJS, ExpressJS, Mongoose", "Databases: MongoDB, SQL"],

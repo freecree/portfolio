@@ -20,7 +20,8 @@
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -44,6 +45,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.16",
     "framer-motion": "^8.4.3",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.33",
     "react-countup": "^6.4.0",
     "react-icons": "^4.7.1",

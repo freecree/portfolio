@@ -20,7 +20,7 @@
     "english": "Англійська",
     "backend": "Бекенд",
     "frontend-list": ["HTML, CSS / SCSS", "JavaScript(ES6) / Typescript", "React, React Router",
-     "React, React Router", "Axios", "Mobx", "i18next", "Білдери: Webpack, Gulp, Vite, Esbuild"
+    "Readux Toolkit, RTK Query", "Ant Design, Material UI", "Axios", "Mobx", "i18next", "Білдери: Webpack, Gulp, Vite, Esbuild"
     ],
     "backend-main": "Основний стек:",
     "backend-main-list": ["NodeJS, ExpressJS, Mongoose", "Бази даних: MongoDB, SQL"],
